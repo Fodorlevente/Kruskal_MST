@@ -16,4 +16,4 @@ class Edge:
         self.verticles = [u,v,w]
 
     def print_edges(self):
-        print(f"(u:{self.verticles[0]}, v:{self.verticles[1]}, w:{self.verticles[2]})")
+        print(f"New edge added: u:{self.verticles[0]}, v:{self.verticles[1]}, w:{self.verticles[2]}")

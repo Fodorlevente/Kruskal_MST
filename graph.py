@@ -28,3 +28,25 @@ The representation of the graph with vertices for example:
             the weight of edge between the two nodes
            ) '''
 
+from edge import Edge
+
+class Graph:
+
+    def __init__(self,vertices):
+        self.vertices = vertices
+        self.graph = []
+
+    # use with Edge object
+    def addEdge(self,edge):
+        self.graph.append(edge)
+        edge.print_edges()
+    
+    def read_from_file(self,filename):
+        with open(filename, 'r') as f:
+            for line in f:
+                y = line.split(",")
+                tmp_edge = Edge(y[0],y[1],y[2])
+                self.addEdge(tmp_edge)
+                
+g = Graph(1213)
+g.read_from_file("./input/test.txt")
