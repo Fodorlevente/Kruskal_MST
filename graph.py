@@ -29,6 +29,7 @@ The representation of the graph with vertices for example:
            ) '''
 
 from edge import Edge
+import os
 
 class Graph:
 
@@ -42,11 +43,18 @@ class Graph:
         edge.print_edges()
     
     def read_from_file(self,filename):
-        with open(filename, 'r') as f:
+        with open(self.generate_filename_path(filename), 'r') as f:
             for line in f:
                 y = line.split(",")
                 tmp_edge = Edge(y[0],y[1],y[2])
                 self.addEdge(tmp_edge)
-                
+
+    def get_folder_path(self):
+        return (os.path.dirname(os.path.realpath(__file__)))
+
+    def generate_filename_path(self,filename):
+        return (self.get_folder_path() + filename)
+
 g = Graph(1213)
-g.read_from_file("./input/test.txt")
+g.read_from_file("\\input\\test.txt")
+g.get_folder_path()
