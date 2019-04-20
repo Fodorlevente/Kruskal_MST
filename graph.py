@@ -16,11 +16,15 @@ where E is the number of edges in the graph and V is the number of vertices, all
 
 The representation of the graph with vertices for example:
     n = 4
-    edge_1 = (0, 1, 10, 35)
-    edge_2 = (0, 2, 6, 27)
-    edge_3 = (1, 3, 15, 10)
-    edge_4 = (2, 3, 4, 98)
+    edge_1 = (0, 1, 10)
+    edge_2 = (0, 2, 6)
+    edge_3 = (1, 3, 15)
+    edge_4 = (2, 3, 4)
 
     n : number of edges in the graph
-    edge: (first node, second node, the weight of edge between the two nodes, the number of childrens) '''
+    edge: (
+            first node: number of childrens in the first node, 
+            second node: number of childrens in the second node, 
+            the weight of edge between the two nodes
+           ) '''
 
