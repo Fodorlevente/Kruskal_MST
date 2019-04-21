@@ -55,8 +55,11 @@ class Graph:
     def generate_filename_path(self,filename):
         return (self.get_folder_path() + filename)
 
-    def max_of_weights(self):
-        pass
+    def max_of_weights(self,node_list):
+        return(max(node_list))  # return the maximal element in the list
+
+    def print_result(self,max_element):
+        print(f"The School has to be built in zone {max_element}")
 
 	# A utility function to find set of an element i 
 	# (uses path compression technique)
@@ -118,13 +121,18 @@ class Graph:
                 result.append([int(u),int(v),int(w)]) 
                 self.union(parent, rank, x, y)			 
             # Else discard the edge 
-
+        
+        result_nodes = []
 		# print the contents of result[] to display the built MST 
         print("Constructed Minimum Spanning Tree:")
         for u,v,weight in result: 
             print("%s -- %s == %s" % (u,v,weight))
+            # Fill result_nodes list with u, v nodes
+            result_nodes.append(u)
+            result_nodes.append(v)
+        
+        self.print_result(self.max_of_weights(result_nodes))
 
 g = Graph(4)
 g.read_from_file("\\input\\test.txt")
-g.get_folder_path()
 g.Kruskal()
