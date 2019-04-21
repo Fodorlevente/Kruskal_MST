@@ -50,4 +50,4 @@ Constructed Minimum Spanning Tree:
 The School has to be built in zone 3
 ```
 
-![Kruskal algorithm](kruskal.jpg)
+![Kruskal algorithm](kruskal.JPG)
