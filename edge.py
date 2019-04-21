@@ -15,5 +15,9 @@ class Edge:
     def __init__(self,u,v,w):
         self.verticles = [u,v,w]
 
+    def __getitem__(self,index):
+        return self.verticles[index]
+
     def print_edges(self):
         print(f"New edge added: u:{self.verticles[0]}, v:{self.verticles[1]}, w:{self.verticles[2]}")
+        
