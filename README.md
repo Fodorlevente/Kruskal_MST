@@ -8,10 +8,8 @@ python graph.py
 ## Usage
 
 ```python
-number_of_vertices = 4
 g = Graph(number_of_vertices)
-g.read_from_file("\\input\\test.txt")
-g.Kruskal()
+g.run("\\input\\test.txt")
 ```
 
 ## Description:
@@ -53,7 +51,7 @@ The School has to be built in zone 3
 ![Kruskal algorithm](kruskal.JPG)
 
 
-### Example for 4 verticle
+### Example for 4 vertices
 ```python
 4
 0,1,10
@@ -66,7 +64,7 @@ The School has to be built in zone 3
 ![input graph with 4 verticle](img/4vertice.png) 
 ![MST graph with 4 verticle](img/4verticemst.png)
 
-### Example for 6 verticle
+### Example for 6 vertices
 ```python
 6
 1,2,1
@@ -82,7 +80,7 @@ The School has to be built in zone 3
 ![input graph with 4 verticle](img/6vertice.png) 
 ![MST graph with 4 verticle](img/6verticemst.png)
 
-### Example for 7 verticle
+### Example for 7 vertices
 ```python
 7
 0,1,20
