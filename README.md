@@ -51,3 +51,55 @@ The School has to be built in zone 3
 ```
 
 ![Kruskal algorithm](kruskal.JPG)
+
+
+### Example for 4 verticle
+```python
+4
+0,1,10
+0,2,6
+0,3,5
+1,3,15
+2,3,4
+2,1,20
+```
+![input graph with 4 verticle](img/4vertice.png) 
+![MST graph with 4 verticle](img/4verticemst.png)
+
+### Example for 6 verticle
+```python
+6
+1,2,1
+1,3,2
+1,4,3
+1,5,4
+2,3,5
+2,4,6
+2,5,7
+0,4,10
+5,0,8
+```
+![input graph with 4 verticle](img/6vertice.png) 
+![MST graph with 4 verticle](img/6verticemst.png)
+
+### Example for 7 verticle
+```python
+7
+0,1,20
+1,4,20
+4,6,20
+6,5,20
+5,3,20
+3,2,20
+2,0,20
+1,2,20
+1,3,20
+3,4,20
+4,5,20
+0,3,20
+0,5,20
+3,6,20
+2,4,20
+```
+![input graph with 4 verticle](img/7vertice.png) 
+![MST graph with 4 verticle](img/7verticemst.png)
