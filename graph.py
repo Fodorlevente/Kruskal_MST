@@ -33,8 +33,8 @@ import os
 
 class Graph:
 
-    def __init__(self,vertices):
-        self.vertices = vertices # Number of vertices n = 4
+    def __init__(self):
+        self.vertices = None # Number of vertices
         self.graph = []
 
     # use with Edge object
@@ -43,11 +43,17 @@ class Graph:
         edge.print_edges()
     
     def read_from_file(self,filename):
+        count_of_lines = 0
         with open(self.generate_filename_path(filename), 'r') as f:
             for line in f:
-                y = line.split(",")
-                tmp_edge = Edge(y[0],y[1],y[2])
-                self.addEdge(tmp_edge)
+                if(count_of_lines == 0):
+                    self.vertices = int(line)
+                    count_of_lines = count_of_lines + 1
+                else:
+                    y = line.split(",")
+                    tmp_edge = Edge(y[0],y[1],y[2])
+                    self.addEdge(tmp_edge)
+                    count_of_lines = count_of_lines + 1
 
     def get_folder_path(self):
         return (os.path.dirname(os.path.realpath(__file__)))
@@ -133,6 +139,6 @@ class Graph:
         
         self.print_result(self.max_of_weights(result_nodes))
 
-g = Graph(4)
-g.read_from_file("\\input\\test.txt")
+g = Graph()
+g.read_from_file("\\input\\test5.txt")
 g.Kruskal()
