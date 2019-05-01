@@ -139,6 +139,18 @@ class Graph:
         
         self.print_result(self.max_of_weights(result_nodes))
 
+    def run(self,filename):
+        try:
+            self.read_from_file(filename)
+            self.Kruskal()
+        except FileNotFoundError:
+            print(f"{filename} is not found!")
+            exit(0)
+        except ValueError:
+            print("The input file is broken, or there is an invalid value in the file!")
+            exit(1)
+        except Exception:
+            exit(2)
+        
 g = Graph()
-g.read_from_file("\\input\\test5.txt")
-g.Kruskal()
+g.run("\\input\\test5.txt")
